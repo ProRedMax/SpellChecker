@@ -16,6 +16,26 @@ void toLowerCase(string &text)
     });
 }
 
+set<string> split(string s, char del = '\n')
+{
+    set<string> returnSet;
+    string temp = "";
+    for (int i = 0; i < (int) s.size(); ++i)
+    {
+        if (s[i] != del)
+        {
+            temp += s[i];
+        }
+        else
+        {
+            toLowerCase(temp);
+            returnSet.insert(temp);
+            temp = "";
+        }
+    }
+    return returnSet;
+}
+
 
 set<string> read_all_words(string filename)
 {
@@ -23,17 +43,9 @@ set<string> read_all_words(string filename)
     std::stringstream sstream;
     sstream << data.rdbuf();
     
-    string text = sstream.str();
+    string text = sstream.str();  
     
-    //TODO processing
-    /*set<string> returnSet;
-    while (getline(data, text))
-    {
-        toLowerCase(text);
-        returnSet.insert(text);
-    }*/
-
-    return returnSet;
+    return split(text);
 }
 
 set<tuple<string, string>> split_word(string word)
@@ -122,7 +134,6 @@ int main()
 {
     set<string> dict = read_all_words("C:\\Users\\mabug\\german.dic");
 
-    cout << dict.size() << endl;
 
     set<string> basic_strings = edit1_good("migran", dict);
     for (const string line : basic_strings)
