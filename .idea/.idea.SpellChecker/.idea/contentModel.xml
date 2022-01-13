@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\mabug\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\mabug\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_SpellChecker.-1038999230.00" t="ExcludeRecursive" />
+    <e p="F:\Programmieren\Spellcheck\SpellChecker" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="SpellChecker" t="IncludeRecursive">
+        <e p="resources" t="Include" />
+        <e p="Spellchecker.cpp" t="Include" />
+        <e p="SpellChecker.vcxproj" t="IncludeRecursive" />
+        <e p="x64\Debug" t="ExcludeRecursive" />
+      </e>
+      <e p="SpellChecker.sln" t="IncludeFlat" />
+      <e p="x64\Debug" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
