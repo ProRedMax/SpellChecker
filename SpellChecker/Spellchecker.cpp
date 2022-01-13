@@ -4,6 +4,7 @@
 #include <iostream>
 #include <set>
 #include <tuple>
+#include <sstream>
 
 using namespace std;
 
@@ -18,14 +19,19 @@ void toLowerCase(string &text)
 
 set<string> read_all_words(string filename)
 {
-    ifstream data(filename);
-    string text;
-    set<string> returnSet;
+    ifstream data(filename, std::ios::in);
+    std::stringstream sstream;
+    sstream << data.rdbuf();
+    
+    string text = sstream.str();
+    
+    //TODO processing
+    /*set<string> returnSet;
     while (getline(data, text))
     {
         toLowerCase(text);
         returnSet.insert(text);
-    }
+    }*/
 
     return returnSet;
 }
