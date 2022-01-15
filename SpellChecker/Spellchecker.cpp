@@ -135,15 +135,17 @@ int main()
     set<string> dict = read_all_words("C:\\Users\\mabug\\german.dic");
 
 
-    set<string> basic_strings = edit1_good("migran", dict);
+    cout << "Eingabe: " << endl;
+    string input;
+
+    cin >> input;
+
+    
+
+    set<string> basic_strings = edit1_good(input, dict);
     for (const string line : basic_strings)
     {
         cout << line << endl;
     }
 
-    set<string> strings = edit2_good("migran", dict);
-    for (const string line : strings)
-    {
-        cout << line << endl;
-    }
 }
