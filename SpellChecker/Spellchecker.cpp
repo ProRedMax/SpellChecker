@@ -10,7 +10,6 @@ using namespace std;
 
 void toLowerCase(string &text)
 {
-    // convert string to back to lower case
     std::for_each(text.begin(), text.end(), [](char & c){
         c = ::tolower(c);
     });

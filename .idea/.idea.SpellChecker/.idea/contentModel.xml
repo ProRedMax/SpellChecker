@@ -9,10 +9,10 @@
         <e p="resources" t="Include" />
         <e p="Spellchecker.cpp" t="Include" />
         <e p="SpellChecker.vcxproj" t="IncludeRecursive" />
-        <e p="x64\Debug" t="ExcludeRecursive" />
+        <e p="x64\Release" t="ExcludeRecursive" />
       </e>
       <e p="SpellChecker.sln" t="IncludeFlat" />
-      <e p="x64\Debug" t="ExcludeRecursive" />
+      <e p="x64\Release" t="ExcludeRecursive" />
     </e>
   </component>
 </project>
