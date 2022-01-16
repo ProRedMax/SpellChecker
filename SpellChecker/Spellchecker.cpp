@@ -5,6 +5,7 @@
 #include <set>
 #include <tuple>
 #include <sstream>
+#include <vector>
 
 using namespace std;
 
@@ -57,13 +58,13 @@ set<tuple<string, string>> split_word(string word)
     return returnSet;
 }
 
-set<string> edit1(string word)
+vector<string> edit1(string word)
 {
     char abc[] = {
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
         'w', 'x', 'y', 'z'
     };
-    set<string> mistakes;
+    vector<string> mistakes;
 
     for (const auto& i : split_word(word))
     {
@@ -71,11 +72,11 @@ set<string> edit1(string word)
         // Letter is missing
         if (x.length() >= 1)
         {
-            mistakes.insert(get<0>(i) + x.substr(1));
+            mistakes.push_back(get<0>(i) + x.substr(1));
         }
         else
         {
-            mistakes.insert(get<0>(i));
+            mistakes.push_back(get<0>(i));
         }
 
         // 2 letters swapped
@@ -86,7 +87,7 @@ set<string> edit1(string word)
             string value1;
             value1 = x.at(0);
             string temp = value + value1 + x.substr(2);
-            mistakes.insert(get<0>(i) + temp);
+            mistakes.push_back(get<0>(i) + temp);
         }
 
         // Letter replaced
@@ -94,13 +95,13 @@ set<string> edit1(string word)
         {
             for (char letter : abc)
             {
-                mistakes.insert(get<0>(i) + letter + x.substr(1));
+                mistakes.push_back(get<0>(i) + letter + x.substr(1));
             }
         }
         // Letter insertion
         for (char letter : abc)
         {
-            mistakes.insert(get<0>(i) + letter + x);
+            mistakes.push_back(get<0>(i) + letter + x);
         }
     }
     return mistakes;
@@ -139,7 +140,7 @@ int main()
 
     cin >> input;
 
-    
+    toLowerCase(input);
 
     set<string> basic_strings = edit1_good(input, dict);
     for (const string line : basic_strings)

@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="284d8e94-4b5e-4ff2-92a7-f29ec1ef2cb4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpellChecker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpellChecker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpellChecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpellChecker/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpellChecker/Spellchecker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/Spellchecker.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/SpellChecker.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/SpellChecker.write.1u.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/vc142.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Release/SpellChecker.iobj" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Release/SpellChecker.iobj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Release/SpellChecker.ipdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Release/SpellChecker.ipdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Release/SpellChecker.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Release/SpellChecker.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +103,7 @@
       <workItem from="1642270445969" duration="711000" />
       <workItem from="1642330143742" duration="326000" />
       <workItem from="1642337131216" duration="787000" />
+      <workItem from="1642348688691" duration="531000" />
     </task>
     <servers />
   </component>
@@ -107,22 +114,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1642337918326">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1642349220921">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.178.1920.1040@0.0.2560.1400" timestamp="1642337918326" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1642337918326">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.178.1920.1040@0.0.2560.1400" timestamp="1642349220921" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1642349220921">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.178.1920.1040@0.0.2560.1400" timestamp="1642337918326" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1642337918326">
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.178.1920.1040@0.0.2560.1400" timestamp="1642349220921" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1642349220920">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.178.1920.1040@0.0.2560.1400" timestamp="1642337918326" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1642337918326">
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.178.1920.1040@0.0.2560.1400" timestamp="1642349220920" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1642349220921">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.178.1920.1040@0.0.2560.1400" timestamp="1642337918326" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.178.1920.1040@0.0.2560.1400" timestamp="1642349220921" />
     <state width="2517" height="360" key="GridCell.Tab.1.bottom" timestamp="1642070575869">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
