@@ -163,17 +163,29 @@ set<string> correct(string word, set<string>& word_list)
 int main()
 {
     set<string> dict = read_all_words("C:\\Users\\mabug\\german.dic");
-
-    cout << "Eingabe: ";
     string input;
-
-    cin >> input;
-
-    toLowerCase(input);
-
-    set<string> basic_strings = correct(input, dict);
-    for (const string line : basic_strings)
+    cout <<
+        "Write any word and the program will try to correct it based on the dictionary you specified in the main method!"
+        << endl;
+    cout << "Type 'exit' to exit the program!" << endl;
+    while (input != "exit")
     {
-        cout << line << endl;
+        cout << "Input: ";
+        getline(cin, input);
+        if (input.empty())
+        {
+            continue;
+        }
+        
+        if (input == "exit")
+        {
+            break;
+        }
+        toLowerCase(input);
+        set<string> basic_strings = correct(input, dict);
+        for (const string line : basic_strings)
+        {
+            cout << line << endl;
+        }
     }
 }
