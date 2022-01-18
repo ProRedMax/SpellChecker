@@ -107,7 +107,7 @@ vector<string> edit1(string word)
     return mistakes;
 }
 
-set<string> edit1_good(string word, set<string> all_words)
+set<string> edit1_good(string & word, set<string> & all_words)
 {
     set<string> returnSet;
     for (string mistake : edit1(word))
@@ -120,12 +120,22 @@ set<string> edit1_good(string word, set<string> all_words)
     return returnSet;
 }
 
-set<string> edit2_good(string word, set<string> all_words)
+template <typename T>
+std::set<T> getUnion(const std::set<T>& a, const std::set<T>& b)
+{
+    std::set<T> result = a;
+    result.insert(b.begin(), b.end());
+    return result;
+}
+
+set<string> edit2_good(string & word, set<string> & all_words)
 {
     set<string> returnSet;
     for (string mistake : edit1(word))
-        for (string mistake1 : edit1_good(mistake, all_words))
-            returnSet.insert(mistake1);
+    {
+        returnSet = getUnion<string>(returnSet, edit1_good(mistake, all_words));
+    }
+
     return returnSet;
 }
 
@@ -134,8 +144,7 @@ int main()
 {
     set<string> dict = read_all_words("C:\\Users\\mabug\\german.dic");
 
-
-    cout << "Eingabe: " << endl;
+    cout << "Eingabe: " ;
     string input;
 
     cin >> input;
