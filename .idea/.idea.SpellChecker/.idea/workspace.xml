@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="284d8e94-4b5e-4ff2-92a7-f29ec1ef2cb4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpellChecker/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpellChecker/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpellChecker/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpellChecker/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpellChecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpellChecker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpellChecker/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SpellChecker/Spellchecker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/Spellchecker.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/SpellChecker.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/SpellChecker.lastbuildstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/SpellChecker.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/SpellChecker.write.1u.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/link.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/vc142.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/SpellChecker.iobj" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Release/SpellChecker.iobj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/SpellChecker.ipdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Release/SpellChecker.ipdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Release/SpellChecker.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Release/SpellChecker.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +99,7 @@
       <workItem from="1642330143742" duration="326000" />
       <workItem from="1642337131216" duration="787000" />
       <workItem from="1642348688691" duration="531000" />
-      <workItem from="1642507954241" duration="1767000" />
+      <workItem from="1642507954241" duration="2394000" />
     </task>
     <servers />
   </component>

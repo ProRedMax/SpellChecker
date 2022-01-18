@@ -9,9 +9,10 @@
 
 using namespace std;
 
-void toLowerCase(string &text)
+void toLowerCase(string& text)
 {
-    std::for_each(text.begin(), text.end(), [](char & c){
+    std::for_each(text.begin(), text.end(), [](char& c)
+    {
         c = ::tolower(c);
     });
 }
@@ -20,7 +21,7 @@ set<string> split(string s, char del = '\n')
 {
     set<string> returnSet;
     string temp = "";
-    for (int i = 0; i < (int) s.size(); ++i)
+    for (int i = 0; i < (int)s.size(); ++i)
     {
         if (s[i] != del)
         {
@@ -42,9 +43,9 @@ set<string> read_all_words(string filename)
     ifstream data(filename, std::ios::in);
     std::stringstream sstream;
     sstream << data.rdbuf();
-    
-    string text = sstream.str();  
-    
+
+    string text = sstream.str();
+
     return split(text);
 }
 
@@ -107,7 +108,7 @@ vector<string> edit1(string word)
     return mistakes;
 }
 
-set<string> edit1_good(string & word, set<string> & all_words)
+set<string> edit1_good(string& word, set<string>& all_words)
 {
     set<string> returnSet;
     for (string mistake : edit1(word))
@@ -128,7 +129,7 @@ std::set<T> getUnion(const std::set<T>& a, const std::set<T>& b)
     return result;
 }
 
-set<string> edit2_good(string & word, set<string> & all_words)
+set<string> edit2_good(string& word, set<string>& all_words)
 {
     set<string> returnSet;
     for (string mistake : edit1(word))
@@ -139,22 +140,40 @@ set<string> edit2_good(string & word, set<string> & all_words)
     return returnSet;
 }
 
+set<string> correct(string word, set<string>& word_list)
+{
+    toLowerCase(word);
+    if (word_list.find(word) != word_list.end())
+    {
+        return set<string>{word};
+    }
+    auto basic_strings = edit1_good(word, word_list);
+    if (basic_strings.size() >= 1)
+    {
+        return basic_strings;
+    }
+    auto good = edit2_good(word, word_list);
+    if (good.size() >= 1)
+    {
+        return good;
+    }
+    return set<string>{word};
+}
 
 int main()
 {
     set<string> dict = read_all_words("C:\\Users\\mabug\\german.dic");
 
-    cout << "Eingabe: " ;
+    cout << "Eingabe: ";
     string input;
 
     cin >> input;
 
     toLowerCase(input);
 
-    set<string> basic_strings = edit1_good(input, dict);
+    set<string> basic_strings = correct(input, dict);
     for (const string line : basic_strings)
     {
         cout << line << endl;
     }
-
 }
