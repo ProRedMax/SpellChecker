@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="284d8e94-4b5e-4ff2-92a7-f29ec1ef2cb4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpellChecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpellChecker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpellChecker/Spellchecker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/Spellchecker.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpellChecker/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpellChecker/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/SpellChecker.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/SpellChecker.lastbuildstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/SpellChecker.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/SpellChecker.write.1u.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/SpellChecker.tlog/link.read.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpellChecker/x64/Release/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SpellChecker/x64/Release/vc142.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/x64/Release/SpellChecker.iobj" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Release/SpellChecker.iobj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/x64/Release/SpellChecker.ipdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Release/SpellChecker.ipdb" afterDir="false" />
@@ -20,14 +21,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.27.29110/include/algorithm" root0="SKIP_HIGHLIGHTING" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <changedPaths>
-      <option value="$PROJECT_DIR$/SpellChecker/Spellchecker.cpp" />
-    </changedPaths>
   </component>
   <component name="ProjectId" id="23dREeU5Oij25zvmzd7bpdFs9cN" />
   <component name="ProjectViewState">
@@ -105,6 +98,7 @@
       <workItem from="1642337131216" duration="787000" />
       <workItem from="1642348688691" duration="531000" />
       <workItem from="1642507954241" duration="4106000" />
+      <workItem from="1642696621104" duration="103000" />
     </task>
     <servers />
   </component>
@@ -113,5 +107,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="2517" height="537" key="GridCell.Tab.0.bottom" timestamp="1642696723577">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="537" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.178.1920.1040@0.0.2560.1400" timestamp="1642696723577" />
+    <state width="2517" height="537" key="GridCell.Tab.0.center" timestamp="1642696723577">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="537" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.178.1920.1040@0.0.2560.1400" timestamp="1642696723577" />
+    <state width="2517" height="537" key="GridCell.Tab.0.left" timestamp="1642696723577">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="537" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.178.1920.1040@0.0.2560.1400" timestamp="1642696723577" />
+    <state width="2517" height="537" key="GridCell.Tab.0.right" timestamp="1642696723577">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="537" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.178.1920.1040@0.0.2560.1400" timestamp="1642696723577" />
   </component>
 </project>
