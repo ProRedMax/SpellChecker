@@ -20,7 +20,7 @@ file(GLOB SpellChecker_SRC CONFIGURE_DEPENDS "src/*.h" "src/*.cpp")
 
 if(NOT CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_CURRENT_BINARY_DIR)
 
-	set(data resources/german.dic resources/test.dic)
+	set(data resources/german.dic)
 
 	foreach(item IN LISTS data)
         	message(STATUS ${item})
