@@ -38,15 +38,22 @@ set<string> split(string s, char del = '\n')
 }
 
 
-set<string> read_all_words(string filename)
+pair<bool, set<string>> read_all_words(string filename)
 {
     ifstream data(filename, std::ios::in);
+
+    if (!data.good())
+    {
+        cout << "Error while opening file: " << filename << endl;
+        return { false, {} };
+    }
+
     std::stringstream sstream;
     sstream << data.rdbuf();
 
     string text = sstream.str();
 
-    return split(text);
+    return { true, split(text) };
 }
 
 set<tuple<string, string>> split_word(string word)
@@ -160,14 +167,28 @@ set<string> correct(string word, set<string>& word_list)
     return set<string>{word};
 }
 
-int main()
+int main(int argc, char* argv[])
 {
-    set<string> dict = read_all_words("C:\\Users\\mabug\\german.dic");
+    string dicPath = "C:\\Users\\mabug\\german.dic";
+
+    if (argc == 2)
+    {
+        dicPath = argv[1];
+    }
+
+    auto dict = read_all_words(dicPath);
+
+    if (!std::get<0>(dict))
+    {
+        return 1;
+    }
+
     string input;
     cout <<
         "Write any word and the program will try to correct it based on the dictionary you specified in the main method!"
         << endl;
     cout << "Type 'exit' to exit the program!" << endl;
+
     while (input != "exit")
     {
         cout << "Input: ";
@@ -181,8 +202,9 @@ int main()
         {
             break;
         }
+
         toLowerCase(input);
-        set<string> basic_strings = correct(input, dict);
+        set<string> basic_strings = correct(input, std::get<1>(dict));
         for (const string line : basic_strings)
         {
             cout << line << endl;
