@@ -169,7 +169,7 @@ set<string> correct(string word, set<string>& word_list)
 
 int main(int argc, char* argv[])
 {
-    string dicPath = "C:\\Users\\mabug\\german.dic";
+    string dicPath = "resources/german.dic";
 
     if (argc == 2)
     {
