@@ -9,12 +9,22 @@
 
 using namespace std;
 
-void toLowerCase(string& text)
+
+struct Dictionary
 {
-    std::for_each(text.begin(), text.end(), [](char& c)
-        {
-            c = ::tolower(c);
-        });
+    string NAME;
+    set<string> CONTENT;
+    bool VALID;
+};
+
+void toLowerCase(string& text, size_t begin = 0, size_t end = std::numeric_limits<size_t>::max())
+{
+    if (end > text.size()) end = text.size();
+
+    std::for_each(text.begin(), text.begin() + end, [](char& c)
+    {
+        c = ::tolower(c);
+    });
 }
 
 set<string> split(string s, char del = '\n')
@@ -38,14 +48,14 @@ set<string> split(string s, char del = '\n')
 }
 
 
-pair<bool, set<string>> read_all_words(string filename)
+bool read_all_words(string filename, set<string>& dest)
 {
     ifstream data(filename, std::ios::in);
 
     if (!data.good())
     {
         cout << "Error while opening file: " << filename << endl;
-        return { false, {} };
+        return false;
     }
 
     std::stringstream sstream;
@@ -53,7 +63,24 @@ pair<bool, set<string>> read_all_words(string filename)
 
     string text = sstream.str();
 
-    return { true, split(text) };
+    dest = split(text);
+    return true;
+}
+
+Dictionary get_dictionary_wpath(const string& path)
+{
+    Dictionary dict;
+
+    size_t last = path.rfind("/", path.npos);
+
+    dict.NAME = path.substr(last + 1, path.size() - last);
+    dict.VALID = read_all_words(path, dict.CONTENT);
+    return dict;
+}
+
+Dictionary get_dictionary(const string& name)
+{
+    return get_dictionary_wpath(string("resources/") + name);
 }
 
 set<tuple<string, string>> split_word(string word)
@@ -169,19 +196,29 @@ set<string> correct(string word, set<string>& word_list)
 
 int main(int argc, char* argv[])
 {
-    string dicPath = "resources/german.dic";
+    string defaultDict = "german.dic";
+
+    Dictionary dict;
 
     if (argc == 2)
     {
-        dicPath = argv[1];
+        string arg = argv[1];
+
+        if (arg.substr(0, 8) == "-custom=")
+        {
+            dict = get_dictionary_wpath(arg.substr(8));
+        }
+        else if (arg.substr(0, 6) == "-name=")
+        {
+            dict = get_dictionary(arg.substr(6));
+        }
     }
-
-    auto dict = read_all_words(dicPath);
-
-    if (!std::get<0>(dict))
+    else
     {
-        return 1;
+        dict = get_dictionary(defaultDict);
     }
+
+    if (!dict.VALID) return 1;
 
     string input;
     cout <<
@@ -204,7 +241,7 @@ int main(int argc, char* argv[])
         }
 
         toLowerCase(input);
-        set<string> basic_strings = correct(input, std::get<1>(dict));
+        set<string> basic_strings = correct(input, dict.CONTENT);
         for (const string line : basic_strings)
         {
             cout << line << endl;
