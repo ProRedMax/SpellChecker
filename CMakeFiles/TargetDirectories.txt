@@ -1,0 +1,4 @@
+C:/Programmieren/SpellChecker/CMakeFiles/RESOURCES.dir
+C:/Programmieren/SpellChecker/CMakeFiles/SpellChecker.dir
+C:/Programmieren/SpellChecker/CMakeFiles/ALL_BUILD.dir
+C:/Programmieren/SpellChecker/CMakeFiles/ZERO_CHECK.dir

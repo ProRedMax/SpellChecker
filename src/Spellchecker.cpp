@@ -17,6 +17,13 @@ struct Dictionary
     bool VALID;
 };
 
+
+/**
+ * \brief Converts the given string into a lowercase string
+ * \param text Text reference which will be converted
+ * \param begin Default = 0, Where to start the lowercase change
+ * \param end Default numeric_limit, usually text.length()
+ */
 void toLowerCase(string& text, size_t begin = 0, size_t end = std::numeric_limits<size_t>::max())
 {
     if (end > text.size()) end = text.size();
@@ -27,7 +34,13 @@ void toLowerCase(string& text, size_t begin = 0, size_t end = std::numeric_limit
     });
 }
 
-set<string> split(string s, char del = '\n')
+/**
+ * \brief Splits a string at the given delimiter
+ * \param s String
+ * \param del Default = '\n'
+ * \return set<string> with a list of split entry strings
+ */
+set<string> split(string& s, char del = '\n')
 {
     set<string> returnSet;
     string temp = "";
@@ -48,6 +61,12 @@ set<string> split(string s, char del = '\n')
 }
 
 
+/**
+ * \brief Reads all words from a file and returns whether or not it could be read or even found
+ * \param filename Path to file to read from
+ * \param dest set<string> to write to
+ * \return Whether or not the file could be found and read from
+ */
 bool read_all_words(string filename, set<string>& dest)
 {
     ifstream data(filename, std::ios::in);
@@ -67,7 +86,12 @@ bool read_all_words(string filename, set<string>& dest)
     return true;
 }
 
-Dictionary get_dictionary_wpath(const string& path)
+/**
+ * \brief Dictionary Struct getter method
+ * \param path Path to set
+ * \return New Dictionary object
+ */
+Dictionary get_dictionary_path(const string& path)
 {
     Dictionary dict;
 
@@ -78,11 +102,21 @@ Dictionary get_dictionary_wpath(const string& path)
     return dict;
 }
 
+/**
+ * \brief Returns path in the resources Folder
+ * \param name dictionary name
+ * \return New Dictionary Object
+ */
 Dictionary get_dictionary(const string& name)
 {
-    return get_dictionary_wpath(string("resources/") + name);
+    return get_dictionary_path(string("resources/") + name);
 }
 
+/**
+ * \brief Splits the string multiple times into two strings on each character index
+ * \param word String to split
+ * \return set<tuple<string, string> with the split strings
+ */
 set<tuple<string, string>> split_word(string word)
 {
     set<tuple<string, string>> returnSet;
@@ -93,6 +127,11 @@ set<tuple<string, string>> split_word(string word)
     return returnSet;
 }
 
+/**
+ * \brief Generates a list of all mistakes possible. Not compared with any dictionary
+ * \param word Word to generate mistakes from
+ * \return vector with all the mistakes. Size can differ by a lot. With long words there will be large vectors
+ */
 vector<string> edit1(string word)
 {
     char abc[] = {
@@ -142,6 +181,12 @@ vector<string> edit1(string word)
     return mistakes;
 }
 
+/**
+ * \brief Generates mistakes witch are actually contained in a dictionary
+ * \param word word to generate mistakes from
+ * \param all_words dictionary reference
+ * \return set<string> with all the mistakes compared with the dictionary
+ */
 set<string> edit1_good(string& word, set<string>& all_words)
 {
     set<string> returnSet;
@@ -155,6 +200,13 @@ set<string> edit1_good(string& word, set<string>& all_words)
     return returnSet;
 }
 
+/**
+ * \brief Inserts a set into another
+ * \tparam T set return type
+ * \param a One set
+ * \param b Another set
+ * \return Unioned set
+ */
 template <typename T>
 std::set<T> getUnion(const std::set<T>& a, const std::set<T>& b)
 {
@@ -163,6 +215,12 @@ std::set<T> getUnion(const std::set<T>& a, const std::set<T>& b)
     return result;
 }
 
+/**
+ * \brief Generates mistakes with a Distance of two and compares them with the 
+ * \param word Word to generate Mistakes from
+ * \param all_words Dictionary
+ * \return set<string> with mistakes with a distance from 2
+ */
 set<string> edit2_good(string& word, set<string>& all_words)
 {
     set<string> returnSet;
@@ -174,6 +232,12 @@ set<string> edit2_good(string& word, set<string>& all_words)
     return returnSet;
 }
 
+/**
+ * \brief Returns user friendly mistakes
+ * \param word Word to generate mistakes from
+ * \param word_list dictionary
+ * \return set<string> user friendly mistake list
+ */
 set<string> correct(string word, set<string>& word_list)
 {
     toLowerCase(word);
@@ -206,7 +270,7 @@ int main(int argc, char* argv[])
 
         if (arg.substr(0, 8) == "-custom=")
         {
-            dict = get_dictionary_wpath(arg.substr(8));
+            dict = get_dictionary_path(arg.substr(8));
         }
         else if (arg.substr(0, 6) == "-name=")
         {
