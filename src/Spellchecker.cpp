@@ -14,7 +14,7 @@ struct Dictionary
 {
     string NAME;
     set<string> CONTENT;
-    bool VALID;
+    bool VALID = false;
 };
 
 
@@ -212,6 +212,7 @@ std::set<T> getUnion(const std::set<T>& a, const std::set<T>& b)
 {
     std::set<T> result = a;
     result.insert(b.begin(), b.end());
+    
     return result;
 }
 
